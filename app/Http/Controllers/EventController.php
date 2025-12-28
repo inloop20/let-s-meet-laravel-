@@ -38,9 +38,9 @@ class EventController extends Controller{
         
         if ($request->filled('search')) {
             $search = $request->search;
-            $query->where(function ($q) use ($search) {
-                $q->where('title', 'like', "%{$search}%");
-            });
+           
+                $query->where('title', 'like', "%{$search}%");
+            
         }
 
         if ($request->filled('city')) {
